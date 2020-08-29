@@ -1,0 +1,41 @@
+.cent{
+    padding-top: 12em;
+}
+.card{
+    background-color: rgba(212,157,125,0.3);
+/*    background-color: rgba(0,0,0,0.3);  */
+    color: black;
+    font-family: cursive;
+}
+html,body{
+    background-image: url(../images/BgIndex.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.custom-btn{
+    margin: 5px 5px 5x 5px;
+    width: 10em;
+    color: black;
+    text-align: center;
+}
+.card-body{
+    margin: 1rem 1rem 1rem 1rem;
+}
+/*
+label{
+    font-size: 1.5em;
+}
+*/
+.jumbotron{
+/*    background-color: rgba(212,157,125,0.3);*/
+    background-color: rgba(155,155,155,0.51);
+
+}
+/*.form{
+    text-align: left;
+}*/
+.content{
+    padding-top: 10em;
+}
