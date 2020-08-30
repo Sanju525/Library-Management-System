@@ -15,6 +15,35 @@ Including another URLconf
 """
 from django.urls import path
 from . import views as stud_views
+from django.contrib.auth import views as auth_views
+
+
 urlpatterns = [
-	path('login/', stud_views.login, name='stud_login'),
+	path('login/', auth_views.LoginView.as_view(
+            template_name='students/logs/login.html'
+        ), name='stud_login'),
+    #path('user_profile/', stud_views.Profile, name='profile'),
+    path('logout/', auth_views.LogoutView.as_view(
+            template_name='students/logs/logout.html'
+        ), name='stud_logout'),
+    path('password-reset/',
+         auth_views.PasswordResetView.as_view(
+             template_name='students/logs/password_reset.html'
+         ),
+         name='stud_password_reset'),
+    path('password-reset/done/',
+         auth_views.PasswordResetDoneView.as_view(
+             template_name='students/logs/password_reset_done.html'
+         ),
+         name='stud_password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='students/logs/password_reset_confirm.html'
+         ),
+         name='password_reset_confirm'),
+    path('stud_password-reset-complete/',
+         auth_views.PasswordResetCompleteView.as_view(
+             template_name='students/logs/password_reset_complete.html'
+         ),
+         name='stud_password_reset_complete'),
 ]
