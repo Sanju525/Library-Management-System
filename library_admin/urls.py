@@ -16,4 +16,5 @@ Including another URLconf
 from django.urls import path
 from . import views as lib_views
 urlpatterns = [
+	path('login/', lib_views.AdminLogin, name='lib_admin_login'),
 ]
