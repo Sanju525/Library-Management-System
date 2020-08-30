@@ -7,12 +7,20 @@
     color: black;
     font-family: cursive;
 }
-html,body{
+.lidrary_admin_body{
     background-image: url(../images/BgIndex.jpg);
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
+}
+.student-body{
+    background-image: url(../images/StudentBg.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
 }
 .custom-btn{
     margin: 5px 5px 5x 5px;
@@ -30,7 +38,9 @@ label{
 */
 .jumbotron{
 /*    background-color: rgba(212,157,125,0.3);*/
-    background-color: rgba(155,155,155,0.51);
+    background-color: rgba(24,105,135,0.5);
+    color: white;
+    font-family: 'Eagle Lake', cursive;
 
 }
 /*.form{
@@ -39,3 +49,10 @@ label{
 .content{
     padding-top: 10em;
 }
+
+#LoginCSS{
+    padding-top: 5rem;
+
+}
+
+
