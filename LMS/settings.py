@@ -137,6 +137,7 @@ STATICFILES_DIR = [
     STATIC_DIR,
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Djago_Heroku
 
