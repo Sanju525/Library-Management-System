@@ -1,0 +1,24 @@
+{% extends 'students/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <div  id="LoginCSS">
+    <div class="jumbotron">
+        <center class='h3'>
+            <h3 style="font-family: 'Dancing Script', cursive;font-weight: bold">Library Management System @College</h3>
+            <svg style="fill: white;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"></path></svg><br>STUDENT LOGIN</center>
+        <hr>
+        <form method="POST" style="font-family: 'Eagle Lake', cursive;">
+            {% csrf_token %}
+            {{ form|crispy }}
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form><br>
+        <div class="border-top pt-1" style="font-family: 'Eagle Lake', cursive;">
+            <small class="text-muted">
+                Forgot Password?<a style="color:red" href="{%url 'stud_password_reset' %}">&nbsp;reset</a>
+            </small>
+        </div>
+        <hr>
+    </div>
+</div>
+    {% endblock %}
