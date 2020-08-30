@@ -2,6 +2,7 @@
     {% load static %}
     {% block title %}LMS@College{% endblock %}
     {% block content %}
+<div class="content">
     <center>
         <div class="card" style="width: auto; height: 18rem;"> <!--style="width: 24rem; height: 20rem"-->
             <div class="card-body">
@@ -11,9 +12,10 @@
 <!--                    Static/book-160871.svg-->
                     LOGIN
                 </h5>
-                <a style="font-family: 'Eagle Lake', cursive;" class="btn btn-outline-dark custom-btn" href="#">ADMIN</a><br><br>
+                <a style="font-family: 'Eagle Lake', cursive;" class="btn btn-outline-dark custom-btn" href="{% url 'lib_admin_login'%}">ADMIN</a><br><br>
                 <a style="font-family: 'Eagle Lake', cursive;" class="btn btn-outline-info custom-btn" href="{% url 'stud_login' %}">STUDENT</a>
             </div>
         </div>
     </center>
+</div>
     {% endblock %}
